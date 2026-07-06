@@ -1,0 +1,12 @@
+int findComplement(int num) {
+    int complement = 0;
+    long place_value = 1; 
+    while (num > 0) {
+        if (num % 2 == 0) {
+            complement += place_value;
+        }
+        place_value *= 2;
+        num /= 2;
+    }
+    return complement;
+}
